@@ -73,8 +73,86 @@ const Projects = () => {
             }
         );
 
+        gsap.fromTo(
+            triggerRef.current,
+            {
+                y: 100,
+                rotationX: 20,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                rotationX: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out",
+                delay: 0.2,
+                scrollTrigger:{
+                    trigger: sectionRef.current,
+                    start: "top 70%",
+                    toggleActions: "play none none reverse",
+                }
+            }
+        )
 
-    }, []);
+        gsap.fromTo(
+            sectionRef.current,
+            {
+                backgroundPosition: "50% 0%"
+            },
+            {
+                backgroundPosition: "50% 100%",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true,
+                }
+            }
+        )
+
+        const horizontalScroll = gsap.to(".panel", {
+            xPercent: -100 *(projectImages.length -1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: triggerRef.current,
+                start: "top top",
+                end: () => `+=${horizontalRef.current.offsetWidth}`,
+                pin: true,
+                scrub: 1,
+                snap: {
+                    snapTo: 1 / (projectImages.length -1),
+                    duration: {main: 0.2, max: 0.3},
+                    delay: 0.1,
+                },
+                invalidateOnRefresh: true,
+            }
+        })
+
+        const panels = gsap.utils.toArray(".panel")
+        panels.forEach((panel, i) => {
+            const image = panel.querySelector(".project-image")
+            const imageTitle = panel.querySelector(".project-title")
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: panel,
+                    containerAnimation: horizontalScroll,
+                    start: "left right",
+                    end: "right left",
+                    scrub: true,
+                }
+            })
+
+            tl.fromTo(image, {scale:0, rotate:-20}, {scale:1, rotate:1, duration:0.5})
+
+            if (imageTitle){
+                tl.fromTo(imageTitle, {y:30}, {y:-100, duration:0.3}, 0.2)
+            }
+        })
+
+    }, [projectImages.length]);
 
     return (
         <section
@@ -111,7 +189,6 @@ const Projects = () => {
                 {projectImages.map((project) => (
 
                     <div
-                    Loading
                     key = {project.id}
                     className = "panel relative flex items-center justify-center">
                         <div
