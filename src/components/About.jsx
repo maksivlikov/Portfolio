@@ -1,5 +1,5 @@
-import {useRef, useEffect} from "react"
-import {gsap } from "gsap"
+import { useRef, useEffect } from "react"
+import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 
@@ -16,7 +16,7 @@ const About = () => {
 
     gsap.fromTo(
       titleRef.current,
-      {y: 100, opacity: 0},
+      { y: 100, opacity: 0 },
       { 
         y: -300, 
         opacity: 1, 
@@ -28,6 +28,7 @@ const About = () => {
         }
       }
     );
+
     gsap.fromTo(introRef.current,
       {y: 100, opacity: 0, filter: "blur(10px)"},
       { 
@@ -60,16 +61,15 @@ const About = () => {
         }
 
       });
-
-      return () => {
-        ScrollTrigger.getAll().forEach(trigger => {
-          if  (trigger.vars.trigger === sectionRef.current) {
-            trigger.kill();
-          }
-        });
-      }
-
     });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.vars.trigger === sectionRef.current) {
+          trigger.kill();
+        }
+      });
+    };
 
 
   });
@@ -84,7 +84,7 @@ const About = () => {
   return (
     <section
     ref = {sectionRef}
-    className = "h-screen relative overflow-hidden color-black">
+    className = "h-screen relative overflow-hidden bg-black">
 
         {/* Background elements */}
         <div className = "absolute inset-0 overflow-hidden">
@@ -111,7 +111,7 @@ const About = () => {
         <div className = "container mx-auto px-4 h-full flex flex-col items-center justify-center">
             <h1 
             ref = {titleRef}
-            className = "text-4xl md:text-6xl font-bold sm:md-16 text-center text-white opacity-0">
+            className = "text-4xl md:text-6xl font-bold sm:mb-16 text-center text-white opacity-0">
                 About Me
             </h1>
         </div>
@@ -119,7 +119,7 @@ const About = () => {
         <div 
         ref = {introRef}
         className = "absolute lg:bottom-[-20rem] md:bottom-[-10rem] bottom-[-20rem] left-0 w-full flex md:flex-row flex-col justify-between lg:px-24 px-5 items-center opacity-0">
-          <h3 className = "text-sm md:text-2xl font-bold text-white z-50 lg:max-w-[45rem] max-w-[27rem] tracking-wider md:mt-20 sm:mt-[-40rem] mt-[-32rem]">
+          <h3 className = "text-sm md:text-2xl font-bold text-white z-50 lg:max-w-[45rem] max-w-[27rem] tracking-wider md:mt-20 sm:-mt-[40rem] -mt-[32rem]">
             I am a passionate software developer with a strong background in web development and a keen interest in creating innovative solutions. With experience in various programming languages and frameworks, I enjoy tackling complex problems and continuously learning new technologies to enhance my skills. My goal is to contribute to impactful projects and collaborate with like-minded individuals to drive positive change through technology.
           </h3>
 
