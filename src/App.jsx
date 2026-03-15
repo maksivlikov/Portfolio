@@ -6,7 +6,7 @@ import Projects from "./components/Projects"
 import { useEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Contact } from "./components/Contact"
+import Contacts from "./components/Contacts"
 
 export default function App() {
 
@@ -24,9 +24,13 @@ export default function App() {
     <>
       <Header />
       <HeroSection />
-      <CustomCursor />
       <About />
       <Projects />
+      <Contacts />
+
+
+      
+      <CustomCursor />
     </>
   )
 }
