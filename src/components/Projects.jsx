@@ -4,7 +4,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SlShareAlt } from "react-icons/sl"
 
-
+//change animations later
 const Projects = () => {
 
     const sectionRef = useRef(null);
@@ -28,9 +28,9 @@ const Projects = () => {
             imageSrc: "/images/project-2.png",
         },
         {
-            id: 3,
-            title: "Project 3",
-            imageSrc: "/images/project-3.png",
+            id: null,
+            title: null,
+            imageSrc: null,
         }
 
     ]
@@ -200,7 +200,7 @@ const Projects = () => {
                             />
 
                             <h2 className = "project-title flex items-center gap-3 md:text-3xl text-sm md:font-bold text-black mt-6 z-50 text-nowrap hover:text-gray-400 transition-colors duration-300 cursor-pointer">
-                                {project.title} <SlShareAlt />
+                                {project.title} {project.title? <SlShareAlt /> : ""}
                             </h2>
                         </div>
                     </div>
