@@ -21,6 +21,8 @@ TODO:
 6. fix projects carousel
 7. fix contact me page
 8. add typing animations to my hero subtitle
+9. change images of projects
+
 
 */
 
