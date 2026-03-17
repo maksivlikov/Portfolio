@@ -3,9 +3,9 @@ import Spline from "@splinetool/react-spline"
 
 const HeroSection = () => {
   return (
-    <section className = "h-screen bg-gradient-to-b from-violet-900 to-black flex xl:flex-row flex-col-reverse items-center justify-between lg:px-24 px-10 relative overflow-hidden">
+    <section className = "h-screen bg-white flex xl:flex-row flex-col-reverse items-center justify-between lg:px-24 px-10 relative overflow-hidden">
         {/* left section */}
-        <div className="z-40 xl:mb-0 mb-[20%]">
+        <div className=" text-black z-40 xl:mb-0 mb-[20%]">
             <motion.h1 
             initial = {{ opacity: 0, y: 80 }}
             animate = {{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ const HeroSection = () => {
             initial = {{ opacity: 0, y: 80 }}
             animate = {{ opacity: 1, y: 0 }}
             transition = {{ type: "spring", stiffness: 40, damping: 25, duration: 1.5, delay: 1.8 }}
-            className = "text-xl, md:text-1xl lg:text-2xl text-gray-300 max-w-2xl">
+            className = "text-black text-xl, md:text-1xl lg:text-2xl max-w-2xl">
                 I build exceptional digital experiences that are fast, accessible, and visually appealing.
             </motion.p>
             

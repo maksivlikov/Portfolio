@@ -18,7 +18,7 @@ const About = () => {
       titleRef.current,
       { y: 100, opacity: 0 },
       { 
-        y: -300, 
+        y: -200, 
         opacity: 1, 
         duration: 0.8, 
         scrollTrigger: {
@@ -32,7 +32,7 @@ const About = () => {
     gsap.fromTo(introRef.current,
       {y: 100, opacity: 0, filter: "blur(10px)"},
       { 
-        y: -400, 
+        y: -300, 
         opacity: 1, 
         duration: 0.8, 
         filter: "blur(0px)", 
