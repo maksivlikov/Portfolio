@@ -7,7 +7,7 @@ export function FloatingLaptop(props) {
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
-    ref.current.position.y = 0.1 * Math.sin(t);
+    ref.current.position.y = 0.1 * Math.sin(t) -1;
     // ref.current.rotation.y += 0.005;
   });
 
