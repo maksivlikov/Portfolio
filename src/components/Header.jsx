@@ -16,16 +16,8 @@ const Header = () => {
 
     return (
 
-        // absolute - position the header at the top of the page,
-        // w-full - make the header take up the full width of the page,
-        // z-50 - set the z-index to 50 to ensure it appears above other elements,
-        // transition-all duration-300 - add a transition effect for any changes to the header's properties, with a duration of 300 milliseconds
         <header className="absolute w-full z-50 transition-all duration-300">
         
-            {/* container - center the content and set a max width, 
-            mx-auto - center the container horizontally, 
-            px-4 sm:px-6 lg:px-8 - add padding on the left and right sides of the container for different screen sizes, 
-            flex items-center justify-between - use flexbox to align items in the center and space them out evenly */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
                 
                 {/* Logo / Name */}
@@ -40,7 +32,7 @@ const Header = () => {
                     </div>
 
                     <span className=" bg-black font-bold bg-clip-text text-transparent">
-                        Max
+                        Maksym Ivlikov
                     </span>
 
                 </motion.div>
@@ -138,7 +130,7 @@ const Header = () => {
                         toggleMenu()
                         openContactForm()
                     }}
-                    className = "mt-4 block w-full px-4 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-violet-400 font-bold">
+                    className = "mt-4 block w-full px-4 py-2 rounded-lg bg-violet-600 font-bold">
                         Contact Me
                     </button>
                 </div>
@@ -160,7 +152,7 @@ const Header = () => {
                     animate = {{ scale: 1, opacity: 1, y: 0 }}
                     exit = {{ scale: 0.8, opacity: 0, y: 30 }}
                     transition = {{ type: "spring", damping: 30, stiffness: 200, duration: 0.8}}
-                    className = "bg-white dark:bg-gray-800 rounded-xl shadow-xl w-full max-w-md p-6">
+                    className = "bg-gray-900 rounded-xl shadow-xl w-full max-w-md p-6">
                         <div className = "flex justify-between items-center mb-4">
                             <h1 className = "text-2xl font-bold text-gray-300">
                                 Get In Touch 
@@ -206,7 +198,7 @@ const Header = () => {
                             type = "submit"
                             whileHover = {{ scale: 1.03 }}
                             whileTap = {{ scale: 0.97 }}
-                            className = "w-full px-4 py-2 bg-gradient-to-r from-violet-600 to-violet-400 hover:from-violet-700 hover:to-purple-700 transition-all duration-300 rounded-lg shadow-md hover:shadow-lg ">
+                            className = "w-full px-4 py-2 bg-violet-600 hover:bg-purple-700 transition-all duration-300 rounded-lg shadow-md hover:shadow-lg ">
                                 Send Message
                             </motion.button>
                         </form>

@@ -43,7 +43,7 @@ export default function App() {
       <Header />
       <HeroSection />
       <About />
-      <Projects />
+      {/* <Projects /> */}
       <Contacts />
 
 
