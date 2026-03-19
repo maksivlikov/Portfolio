@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
-
+// TODO : REMOVE CIRCLES FOR MOBILE
 gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
@@ -11,21 +11,37 @@ const experiences = [
     company: "Market Harborough Building Society",
     role: "Intern Software Engineer",
     date: "Feb 2026 - Present",
-    description: "Worked on modern UI systems using React and Tailwind.",
+    description: "Full-stack web developer specialising in React, TailwindCSS and TypeScript on the frontend, with Convex powering the backend. Work within a small, agile team to develop and optimise business web applications, taking responsibility for feature implementation, performance improvements, and collaborative problem-solving.",
   },
   {
     company: "University of Warwick",
     role: "BEng Computer Systems Engineering",
     date: "Sep 2025 - Present",
-    description: "Built internal tools and improved performance.",
+    description: "Relevant modules include Programming for Computer Scientists, Design of Data Structures, Computer Security and more. Built 3+ courseworks in Java, utilising advanced algorithms, such as DFS, BFS and more.",
   },
   {
     company: "Centre for Integrative Semiconductor Materials, Swansea University",
-    role: "Freelancer",
-    date: "2022 - 2023",
-    description: "Created websites for clients and startups.",
+    role: "Work Experience",
+    date: "November 2023",
+    description: "Gained hands-on experience in semiconductor research, focusing on photovoltaic device characterisation and data analysis. Developed Python scripts to process experimental data and contributed to presentations and team discussions. Built strong analytical, problem-solving, and professional communication skills in a real research environment.",
   },
 ];
+
+
+const highlightText = (text) => {
+  const keywords = ["Python", "React", "TailwindCSS", "TypeScript", "Convex", "Java"];
+
+  return text.split(new RegExp(`(${keywords.join("|")})`, "gi")).map((part, i) =>
+    keywords.includes(part) ? (
+      <span key={i} className="text-violet-600 font-semibold border-b-2 border-violet-600">
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+};
+
 
 const ExperienceSection = () => {
   const containerRef = useRef(null);
@@ -41,7 +57,7 @@ const ExperienceSection = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top center",
-        end: "bottom center",
+        end: "bottom bottom",
         scrub: true,
       },
     });
@@ -52,7 +68,7 @@ const ExperienceSection = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top center",
-        end: "bottom center",
+        end: "bottom bottom",
         scrub: true,
       },
     });
@@ -73,7 +89,7 @@ const ExperienceSection = () => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 50%",
+            start: "top 70%",
             toggleActions: "play none none reverse",
           },
         }
@@ -84,7 +100,7 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="w-full bg-white py-20 md:py-40 px-4">
 
-      <div class="custom-shape-divider-top-1773910476"> 
+      <div className="custom-shape-divider-top-1773910476"> 
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> 
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
             class="shape-fill">
@@ -144,7 +160,7 @@ const ExperienceSection = () => {
                   <p className="text-sm text-black/60 mb-2">
                     {exp.date}
                   </p>
-                  <p className="text-black">{exp.description}</p>
+                  <p className="text-black">{highlightText(exp.description)}</p>
                 </div>
               </div>
             </div>
