@@ -63,7 +63,7 @@ const Header = () => {
                     animate = {{ opacity: 1, scale: 1 }}
                     transition = {{ delay: 1.3, duration: 0.8 }}
                     className = "text-black hover:violet-600 dark:hover:text-violet-600 transition-colors duration-300"
-                    href = "#">
+                    href = "https://github.com/maksivlikov">
                         <FiGithub className="w-5 h-5" />
                     </motion.a>
 
@@ -94,7 +94,7 @@ const Header = () => {
                     <motion.button 
                     whileTap = {{ scale: 0.7}}
                     onClick = {toggleMenu}
-                    className = "text-gray-300">
+                    className = "text-black">
                         {isOpen? <FiX className = "h-6 w-6"/> : <FiMenu className = "h-6 w-6"/>}
                     </motion.button>
                 </div>
@@ -117,7 +117,7 @@ const Header = () => {
 
                 <div className = "pt-4 border-t border-black ">
                     <div className="flex space-x-5">
-                        <a href = "#">
+                        <a href = "https://github.com/maksivlikov">
                             <FiGithub className = "h-5 w-5 text-black"/>
                         </a>
                         <a href = "#">

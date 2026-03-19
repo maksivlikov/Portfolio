@@ -7,7 +7,7 @@ import { useEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Contacts from "./components/Contacts"
-
+import ExperienceSection from "./components/ExperienceSection"
 
 
 /**
@@ -44,7 +44,8 @@ export default function App() {
       <HeroSection />
       <About />
       {/* <Projects /> */}
-      <Contacts />
+      <ExperienceSection />
+      {/* <Contacts /> */}
 
 
       

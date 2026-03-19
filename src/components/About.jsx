@@ -20,7 +20,7 @@ const About = () => {
       titleRef.current,
       { y: 100, opacity: 0 },
       { 
-        y: -200, 
+        y: 0, 
         opacity: 1, 
         duration: 0.8, 
         scrollTrigger: {
@@ -34,7 +34,7 @@ const About = () => {
     gsap.fromTo(introRef.current,
       {y: 100, opacity: 0, filter: "blur(10px)"},
       { 
-        y: -300, 
+        y: 0, 
         opacity: 1, 
         duration: 0.8, 
         filter: "blur(0px)", 
@@ -109,25 +109,26 @@ const About = () => {
           ))}
 
         </div>
+        <div className="sm:-translate-y-10  relative z-30 min-h-screen flex flex-col items-center justify-center gap-4 px-6 lg:px-24 text-center">
 
-        <div className = "container mx-auto px-4 h-full flex flex-col items-center justify-center">
-            <h1 
-            ref = {titleRef}
-            className = "text-4xl md:text-6xl font-bold sm:mb-16 text-center text-white opacity-0">
-                About Me
-            </h1>
+          <div className = "container mx-auto px-4 h-full flex flex-col items-center justify-center">
+              <h1 
+              ref = {titleRef}
+              className = "text-4xl md:text-6xl font-bold text-center text-white opacity-0">
+                  About Me
+              </h1>
+          </div>
+
+          <div
+            ref={introRef}
+            className="w-full flex justify-center px-6 lg:px-24 mt-4 lg:mt-24"
+          >
+            <h3 className="text-sm sm:text-lg md:text-2xl font-medium text-white max-w-2xl text-center ">
+              I'm an Intern Software Engineer based in Coventry, UK, building full-stack applications with JavaScript, Python, Java, and C#. I also study Computer Science and Engineering at the University of Warwick. 
+            </h3>
+          </div>
         </div>
 
-        <div 
-        ref = {introRef}
-        className = "absolute lg:bottom-[-20rem] md:bottom-[-10rem] bottom-[-20rem] left-0 w-full flex md:flex-row flex-col justify-between lg:px-24 px-5 items-center opacity-0">
-          <h3 className = "text-sm md:text-2xl font-bold text-white z-50 lg:max-w-[45rem] max-w-[27rem] tracking-wider md:mt-20 sm:-mt-[40rem] -mt-[32rem]">
-            I'm an Intern Software Engineer based in Coventry, United Kingdom. I have experience working with both frontend and backend, coding in JavaScript, Python, Java, C# and more.
-          </h3>
-
-          <img src = "/images/person.png" alt = "profile-img" className = "lg:h-[40rem] md:h-[25rem] h-[20rem] mix-blend-lighten"/>
-
-        </div>
 
     </section>
   )
