@@ -25,11 +25,17 @@ const experiences = [
     date: "November 2023",
     description: "Gained hands-on experience in semiconductor research, focusing on photovoltaic device characterisation and data analysis. Developed Python scripts to process experimental data and contributed to presentations and team discussions. Built strong analytical, problem-solving, and professional communication skills in a real research environment.",
   },
+  {
+    company: "Coleg Cambria",
+    role: "A-levels",
+    date: "Sep 2023 - Sep 2025",
+    description: "5 A-levels with A* or A including Further Mathematics, Computer Science and Physics",
+  },
 ];
 
 
 const highlightText = (text) => {
-  const keywords = ["Python", "React", "TailwindCSS", "TypeScript", "Convex", "Java"];
+  const keywords = ["Python", "React", "TailwindCSS", "TypeScript", "Convex", "Java", "Computer Science"];
 
   return text.split(new RegExp(`(${keywords.join("|")})`, "gi")).map((part, i) =>
     keywords.includes(part) ? (
@@ -57,7 +63,7 @@ const ExperienceSection = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top center",
-        end: "bottom bottom",
+        end: "bottom center",
         scrub: true,
       },
     });
@@ -68,7 +74,7 @@ const ExperienceSection = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top center",
-        end: "bottom bottom",
+        end: "bottom center",
         scrub: true,
       },
     });

@@ -8,7 +8,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import ContactsSection from "./sections/ContactsSection"
 import ExperienceSection from "./sections/ExperienceSection"
-
+import FooterSection from "./sections/FooterSection"
 
 /**
  
@@ -25,6 +25,7 @@ TODO:
 7. fix contact me page
 8. change images of projects
 
+maybe add c# qualification
 
 */
 
@@ -47,8 +48,8 @@ export default function App() {
       <AboutSection />
       {/* <ProjectsSection /> */}
       <ExperienceSection />
-      <ContactsSection />
-
+      {/* <ContactsSection /> */}
+      <FooterSection />
 
       
       <CustomCursor />  
