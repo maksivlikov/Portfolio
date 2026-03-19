@@ -1,13 +1,13 @@
 import Header from "./components/Header"
-import HeroSection from "./components/HeroSection"
+import HeroSection from "./sections/HeroSection"
 import CustomCursor from "./components/CustomCursor"
-import About from "./components/About"
-import Projects from "./components/Projects"
+import AboutSection from "./sections/AboutSection"
+import ProjectsSection from "./sections/ProjectsSection"
 import { useEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Contacts from "./components/Contacts"
-import ExperienceSection from "./components/ExperienceSection"
+import Contacts from "./sections/ContactsSection"
+import ExperienceSection from "./sections/ExperienceSection"
 
 
 /**
@@ -42,10 +42,10 @@ export default function App() {
     <>
       <Header />
       <HeroSection />
-      <About />
-      {/* <Projects /> */}
+      <AboutSection />
+      {/* <ProjectsSection /> */}
       <ExperienceSection />
-      {/* <Contacts /> */}
+      {/* <ContactsSection /> */}
 
 
       

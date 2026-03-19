@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { FloatingLaptop } from "./FloatingLaptop";
+import { FloatingLaptop } from "../components/FloatingLaptop";
 import { TiLocation } from "react-icons/ti";
 
 const HeroSection = () => {

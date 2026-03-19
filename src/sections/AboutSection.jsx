@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 // FIX SCALING ISSUE
 
-const About = () => {
+const AboutSection = () => {
 
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
@@ -134,4 +134,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutSection

@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SlShareAlt } from "react-icons/sl"
 
 //change animations later
-const Projects = () => {
+const ProjectsSection = () => {
 
     const sectionRef = useRef(null);
 
@@ -214,4 +214,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default ProjectsSection

@@ -2,7 +2,7 @@ import { useRef, useEffect} from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-const Contacts = () => {
+const ContactsSection = () => {
 
   const circleRef = useRef(null)
   const sectionRef= useRef(null)
@@ -116,4 +116,4 @@ const Contacts = () => {
   )
 }
 
-export default Contacts
+export default ContactsSection
