@@ -125,13 +125,13 @@ const ExperienceSection = () => {
         {/* PROGRESS LINE */}
         <div
           ref={progressRef}
-          className="absolute left-1/2 -translate-x-1/2 w-[2px] bg-violet-600 top-0 h-0"
+          className="absolute left-1/2 -translate-x-1/2 w-[2px] bg-violet-600 top-0 h-0 "
         />
 
         {/* MOVING CIRCLE */}
         <div
           ref={circleRef}
-          className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-violet-600 rounded-full border-4 border-white shadow-md"
+          className="absolute z-[9] left-1/2 -translate-x-1/2 w-4 h-4 bg-violet-600 rounded-full border-4 border-white shadow-md"
           style={{ top: 0 }}
         />
 
@@ -145,15 +145,16 @@ const ExperienceSection = () => {
               }`}
             >
               {/* TIMELINE DOT */}
-              <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-gray-500 rounded-full z-10" />
-              <div className="absolute left-1/2 -translate-x-1/2 w-2 h-2 bg-white rounded-full z-10" />
+              <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 md:mt-1 bg-white border-gray-500 border-2 rounded-full z-[1]" />
+              
+              
               {/* Spacer */}
               <div className="w-full md:w-1/2" />
 
               {/* CARD */}
               <div
                 ref={(el) => (cardsRef.current[i] = el)}
-                className="w-full md:w-1/2 px-4"
+                className="w-full md:w-1/2 px-4 z-[20]"
               >
                 
                 <div className="bg-white border border-black p-6 rounded-2xl shadow-lg">
