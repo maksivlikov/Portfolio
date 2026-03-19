@@ -6,22 +6,24 @@ import ProjectsSection from "./sections/ProjectsSection"
 import { useEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Contacts from "./sections/ContactsSection"
+import ContactsSection from "./sections/ContactsSection"
 import ExperienceSection from "./sections/ExperienceSection"
 
 
 /**
  
 TODO:
-1. change the 3d model
-2. change colors on hero
-3. add wavy transition to about
+
+- change mobile navbar/contact me colors in navbar
+
+  1. change the 3d model
+  2. change colors on hero
+  3. add wavy transition to about
 4. change colors on contact me
-5. change the image of the about page, see if can add floating animation
+  5. change the image of the about page, see if can add floating animation
 6. fix projects carousel
 7. fix contact me page
-8. add typing animations to my hero subtitle
-9. change images of projects
+8. change images of projects
 
 
 */
@@ -45,7 +47,7 @@ export default function App() {
       <AboutSection />
       {/* <ProjectsSection /> */}
       <ExperienceSection />
-      {/* <ContactsSection /> */}
+      <ContactsSection />
 
 
       

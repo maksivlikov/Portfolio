@@ -109,7 +109,7 @@ const AboutSection = () => {
           ))}
 
         </div>
-        <div className="sm:-translate-y-10  relative z-30 min-h-screen flex flex-col items-center justify-center gap-4 px-6 lg:px-24 text-center">
+        <div className="sm:-translate-y-10  relative z-30 min-h-screen flex flex-col items-center justify-center gap-2 px-6 lg:px-24 text-center">
 
           <div className = "container mx-auto px-4 h-full flex flex-col items-center justify-center">
               <h1 
@@ -121,10 +121,12 @@ const AboutSection = () => {
 
           <div
             ref={introRef}
-            className="w-full flex justify-center px-6 lg:px-24 mt-4 lg:mt-24"
+            className="w-full flex justify-center px-6 lg:px-24 mt-4"
           >
             <h3 className="text-sm sm:text-lg md:text-2xl font-medium text-white max-w-2xl text-center ">
-              I'm an Intern Software Engineer based in Coventry, UK, building full-stack applications with JavaScript, Python, Java, and C#. I also study Computer Science and Engineering at the University of Warwick. 
+              I'm an Intern Software Engineer based in Coventry, UK, building full-stack applications with JavaScript, Python, Java, and C#. 
+              I am also in my first year studying Computer Science and Electrical Engineering at the University of Warwick. 
+              I am driven by learning new technologies and expanding my knowledge of the industry. 
             </h3>
           </div>
         </div>
