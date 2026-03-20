@@ -1,9 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser"
 
 const Header = () => {
 
+    const form = useRef();
     // toggle menu for mobile view
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -13,6 +15,21 @@ const Header = () => {
     const [contactFormOpen, setContactFormOpen] = useState(false);
     const openContactForm = () => setContactFormOpen(true);
     const closeContactForm = () => setContactFormOpen(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm("portfolio8ur348t98", "template_qqcfvam", form.current, "OZI2S4xeqwsEsITou").then(
+            () => {
+                alert("Message sent successfully");
+                form.current.reset();
+            },
+            (error) => {
+                alert("Failed to send message, please try again.", error.text);
+            }
+        )
+
+    }
 
     return (
 
@@ -165,13 +182,13 @@ const Header = () => {
                             </div>
 
                             {/* Input forms */}
-                            <form className = "space-y-4">
+                            <form ref={form} onSubmit={sendEmail} className = "space-y-4">
                                 {/* name */}
                                 <div>
                                     <label htmlFor = "name" className = "block text-sm font-medium text-gray-300 mb-1">
                                         Name
                                     </label>
-                                    <input type = "text" id = "name" placeholder = "Your Name" 
+                                    <input type = "text" id = "name" placeholder = "Your Name" name = "name" 
                                     className = "w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 bg-gray-700">
                                     </input>
                                 </div>
@@ -180,7 +197,7 @@ const Header = () => {
                                     <label htmlFor = "email" className = "block text-sm font-medium text-gray-300 mb-1">
                                         Email
                                     </label>
-                                    <input type = "email" id = "email" placeholder = "Your Email" 
+                                    <input type = "email" id = "email" placeholder = "Your Email" name = "email"
                                     className = "w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 bg-gray-700">
                                     </input>
                                 </div>
@@ -189,7 +206,7 @@ const Header = () => {
                                     <label htmlFor = "message" className = "block text-sm font-medium text-gray-300 mb-1">
                                         Message
                                     </label>
-                                    <textarea rows = "4" id = "message" placeholder = "Your Message" 
+                                    <textarea rows = "4" id = "message" placeholder = "Your Message" name = "message"
                                     className = "w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 bg-gray-700">
                                     </textarea>
                                 </div>
