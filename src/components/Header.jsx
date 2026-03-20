@@ -56,7 +56,7 @@ const Header = () => {
 
                 {/* Desktop Nav   */}
                 <nav className = "lg:flex hidden space-x-8">
-                    {["Home", "About", "Experience", "Contact"].map((item, index) => (
+                    {["Home", "About", "Experience", "Connect"].map((item, index) => (
                         // "Projects", 
                         <motion.a
                         key={item}

@@ -5,7 +5,7 @@ const FooterSection = () => {
 
     
     <div 
-    id = "Contact"
+    id = "Connect"
     className = "relative bg-black text-white py-16 px-6 mt-0">
 
         
