@@ -6,7 +6,9 @@ import { TiLocation } from "react-icons/ti";
 
 const HeroSection = () => {
   return (
-    <section className="py-20 lg:py-0 min-h-screen bg-white flex flex-col-reverse lg:flex-row items-center justify-between lg:justify-center lg:px-24 px-10 gap-10 relative overflow-hidden">
+    <section 
+    id = "Home"
+    className="py-20 lg:py-0 min-h-screen bg-white flex flex-col-reverse lg:flex-row items-center justify-between lg:justify-center lg:px-24 px-10 gap-10 relative overflow-hidden">
 
         {/* left section */}
         <div className="text-black z-40 lg:mb-0 ">

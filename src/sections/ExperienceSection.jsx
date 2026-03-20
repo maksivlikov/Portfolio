@@ -104,7 +104,7 @@ const ExperienceSection = () => {
   }, []);
 
   return (
-    <section id="experience" className="w-full bg-white py-20 md:py-40 px-4">
+    <section id="Experience" className="w-full bg-white py-20 md:py-40 px-4">
 
       <div className="custom-shape-divider-top-1773959378">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

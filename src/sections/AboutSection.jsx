@@ -85,6 +85,7 @@ const AboutSection = () => {
 
   return (
     <section
+    id = "About"
     ref = {sectionRef}
     className = "h-screen relative overflow-hidden bg-black">
 

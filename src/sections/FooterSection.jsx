@@ -4,7 +4,9 @@ const FooterSection = () => {
   return (
 
     
-    <div className = "relative bg-black text-white py-16 px-6 mt-0">
+    <div 
+    id = "Contact"
+    className = "relative bg-black text-white py-16 px-6 mt-0">
 
         
 
@@ -23,7 +25,7 @@ const FooterSection = () => {
 
                     <div className="flex space-x-4">
                         <a className="text-white hover:text-violet-600 transition-colors" 
-                        href = "#">
+                        href = "https://github.com/maksivlikov">
                             <FiGithub className="w-5 h-5"/>
                         </a>
                     
@@ -42,7 +44,8 @@ const FooterSection = () => {
                     © Maksym Ivlikov. All rights reserved.
                 </p>
 
-                <div className="flex space-x-6 mt-4 md:mt-0">
+                {/* add later */}
+                {/* <div className="flex space-x-6 mt-4 md:mt-0">
                     <a className = "text-gray-500 hover:text-white text-sm transition-colors" 
                     href = "#"> 
                         Privacy Policy
@@ -55,7 +58,7 @@ const FooterSection = () => {
                     href = "#"> 
                         Cookie Policy
                     </a>
-                </div>
+                </div> */}
             </div>
 
         </div>
