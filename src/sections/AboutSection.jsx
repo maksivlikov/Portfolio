@@ -125,9 +125,9 @@ const AboutSection = () => {
             className="w-full flex justify-center px-6 lg:px-24 mt-4"
           >
             <h3 className="text-sm sm:text-lg md:text-2xl font-medium text-white max-w-2xl text-center ">
-              I'm an Intern Software Engineer based in Coventry, UK, building full-stack applications with JavaScript, Python, Java, and C#. 
-              I am also in my first year studying Computer Science and Electrical Engineering at the University of Warwick. 
-              I am driven by learning new technologies and expanding my knowledge of the industry. 
+              I'm a Computer Systems Engineering student at the University of Warwick with a strong interest in software development and building practical applications. 
+              I work with technologies such as JavaScript, TypeScript, React, Java, Python and .NET, and enjoy exploring both frontend and backend development. 
+              I use my projects to experiment with new technologies, solve problems and develop my skills as a software engineer.
             </h3>
           </div>
         </div>
